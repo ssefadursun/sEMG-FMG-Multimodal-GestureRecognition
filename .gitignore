@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+*.npz
+*.hdf5
+*.h5
+*.csv
+Data/
+dataset.hdf5
+loocv_fold_detaylari.csv
+loocv_ozet_rapor.csv
