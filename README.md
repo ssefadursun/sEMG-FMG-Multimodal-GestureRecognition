@@ -2,8 +2,9 @@
 
 
 This repository provides an open-source, reproducible research framework for multimodal hand gesture classification using surface electromyography (sEMG) and force myography (FMG) sensor fusion. The codebase includes clean, PEP 8-compliant implementations, a 12-feature **Golden Standard** biosignal extraction pipeline, and specialized machine learning architectures validated against two major open-access benchmark databases:
-1. **Zenodo Multimodal Forearm Dataset (Young et al., 2025, *PLOS ONE*)**
-2. **GREFTUD Multimodal Gesture Dataset (Rohr et al., 2025, *IEEE TNSRE*)**
+1. **[Zenodo Multimodal Forearm Dataset (Young et al., 2025, *PLOS ONE*)](https://zenodo.org/records/14502575)** — [PLOS ONE Article](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0321319) | [Zenodo Repository](https://zenodo.org/records/14502575)
+
+2. **[GREFTUD Multimodal Gesture Dataset (Rohr et al., 2025, *IEEE TNSRE*)](https://tudatalib.ulb.tu-darmstadt.de/items/dc50601f-41d8-4e4c-966b-83bf7b7f8543)** 
 
 ---
 
@@ -36,7 +37,7 @@ $$\mathbf{f} = \left[ \text{MAV}, \text{RMS}, \text{WL}, \text{ZC}_{\text{dyn}},
 
 * **Amplitude & Energy:** Mean Absolute Value ($\text{MAV}$), Root Mean Square ($\text{RMS}$), and Waveform Length ($\text{WL}$).
 * **Dynamic-Threshold Morphology:** Zero Crossing ($\text{ZC}$) and Slope Sign Change ($\text{SSC}$) computed with an adaptive noise rejection threshold $\text{Th} = 0.05 \cdot \sigma_x$ to eliminate low-frequency baseline drift in FMG and high-frequency stochastic noise in sEMG.
-* **Complexity & Non-linear Force:** Log-Detector ($\text{LogD} = \exp(\frac{1}{N}\sum \ln(\vert{}x_i\vert{} + \epsilon))$) and Hjorth Parameters ($\text{Activity}$, $\text{Mobility}$, $\text{Complexity}$) to model motor unit chaotic recruitment and fine coordination.
+* **Complexity & Non-linear Force:** Log-Detector $\text{LogD} = \exp\left(\frac{1}{N}\sum \ln(\vert{}x_i\vert{} + \epsilon)\right)$ and Hjorth Parameters ($\text{Activity}$, $\text{Mobility}$, $\text{Complexity}$) to model motor unit chaotic recruitment and fine coordination.
 * **Spectral Domain (Welch PSD):** Mean Frequency ($\text{MNF}$), Median Frequency ($\text{MDF}$), and Spectral Entropy ($\text{SpecEnt}$) quantifying signal disorder and frequency shifts under muscle contraction.
 
 ---
